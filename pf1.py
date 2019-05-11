@@ -13,10 +13,10 @@ class robot:
         self.x = np.random.normal(0, 2.0) 
         self.y = np.random.normal(0, 1.0) 
         self.orientation = pi /2 + np.random.normal(0, 0.026) 
-        self.x_noise = 0.0;
-        self.y_noise = 0.0;
-        self.yaw_noise    = 0.0;
-        self.sense_noise   = 0.0;
+        self.x_noise = 0.0:
+        self.y_noise = 0.0:
+        self.yaw_noise    = 0.0:
+        self.sense_noise   = 0.0:
     
     def set(self, new_x, new_y, new_orientation):
         self.x = float(new_x)
@@ -25,10 +25,10 @@ class robot:
     
     
     def set_noise(self, new_x_noise, new_y_noise, new_yaw_noise, new_sense_noise):
-        self.x_noise = float(new_x_noise);
-        self.y_noise    = float(new_y_noise);
-        self.yaw_noise   = float(new_yaw_noise);
-        self.sense_noise   = float(new_sense_noise);
+        self.x_noise = float(new_x_noise):
+        self.y_noise    = float(new_y_noise):
+        self.yaw_noise   = float(new_yaw_noise):
+        self.sense_noise   = float(new_sense_noise):
     
     def sense(self):
         Z = []
@@ -65,7 +65,7 @@ class robot:
         
         # calculates how likely a measurement should be
         
-        prob = 1.0 ;
+        prob = 1.0 :
         for i in range(len(landmarks)):
             dist = np.sqrt((self.x - landmarks[i][0]) ** 2 + (self.y - landmarks[i][1]) ** 2) + np.random.normal(0.0, self.sense_noise)
            #  prob *= self.Gaussian(dist, self.sense_noise, measurement[i])
